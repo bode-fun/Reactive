@@ -5,20 +5,22 @@
 //  Created by Jan Fooken on 06.02.23.
 //
 
-struct Signal<T> {
-  var runtime: Runtime
-  let id: Int
+typealias SignalId = Int
 
-  init(runtime: Runtime, id: Int) {
-    self.runtime = runtime
-    self.id = id
-  }
+struct Signal<T> {
+  let runtime: Runtime
+  let id: SignalId
 
   var value: T {
     get {
+      // Get value
       let runtimeValue = self.runtime.signalValues[self.id]
-      let downcastetValue = runtimeValue as! T
-      return downcastetValue
+      let downCastedValue = runtimeValue as! T
+
+      // Add subscribers
+
+      // Return value
+      return downCastedValue
     }
 
     mutating set {

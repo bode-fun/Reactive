@@ -13,7 +13,7 @@ class Runtime {
     signalValues.append(value)
     // Get id of current value
     let id = signalValues.count - 1
-    // Return signal with type informations and reference id of the tracked value
+    // Return signal with type information and reference id of the tracked value
     // Runtime has to be a class because it has to be passed by reference,
     // which is not possible with structs
     return Signal<T>(runtime: self, id: id)

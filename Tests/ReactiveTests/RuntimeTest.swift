@@ -23,11 +23,11 @@ final class RuntimeTest: XCTestCase {
     let runtime = Runtime()
     XCTAssertEqual(runtime.signalValues.count, 0)
 
-    let _ = runtime.createSignal(value: 0)
+    _ = runtime.createSignal(value: 0)
     XCTAssertEqual(runtime.signalValues.count, 1)
   }
 
-  func testGlobalRuntimeSyncronizesWithSignalsReference() throws {
+  func testGlobalRuntimeSynchronizedWithSignalsReference() throws {
     let runtime = Runtime()
     var count = runtime.createSignal(value: 0)
     count.value = 2
