@@ -20,31 +20,31 @@ final class SignalTest: XCTestCase {
 
   func testTheCompilerPreservesTheSignalType() throws {
     let runtime = Runtime()
-    let count = runtime.createSignal(value: 0)
+    let count = runtime.createSignal(0)
 
     XCTAssert(type(of: count) == Signal<Int>.self)
   }
 
   func testSignalUpdateItsValue() throws {
     let runtime = Runtime()
-    var count = runtime.createSignal(value: 0)
+    var count = runtime.createSignal(0)
     count.value = 2
 
     XCTAssertEqual(count.value, 2)
   }
 
-  func testNewSignalIsEqualToItsInitalRuntimeValue() throws {
+  func testNewSignalIsEqualToItsInitialRuntimeValue() throws {
     let runtime = Runtime()
-    let count = runtime.createSignal(value: 2)
+    let count = runtime.createSignal(2)
 
     XCTAssertEqual(count.value, 2)
   }
 
   func testSignalChangeUpdatesItsRuntimeValue() throws {
     let runtime = Runtime()
-    var count = runtime.createSignal(value: 0)
+    var count = runtime.createSignal(0)
     count.value = 2
-    
+
     let runtimeValue = runtime.signalValues[count.id] as! Int
     XCTAssertEqual(runtimeValue, 2)
   }
@@ -52,7 +52,7 @@ final class SignalTest: XCTestCase {
   func testPerformanceExample() throws {
     // This is an example of a performance test case.
     self.measure {
-        // Put the code you want to measure the time of here.
+      // Put the code you want to measure the time of here.
     }
   }
 }
