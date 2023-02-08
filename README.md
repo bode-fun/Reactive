@@ -4,7 +4,7 @@ A small and very simple state management and reactive system written in Swift �
 
 Everything is about state 🤯
 
-- The runtime holts the state and manages effects 🫡
+- The runtime holds the state and manages effects 🫡
 - The Signal is an event emitter 📰
   - It sets and modifies its subscribers 🤔
   - It lets one access the state 📦
