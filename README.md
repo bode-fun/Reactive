@@ -33,7 +33,7 @@ let decrement = { count.setValue(count.getValue() - 1) }
 // Derived values aka. computed values have to be closures.
 // By being a closure, the evaluation of `double` gets
 // delayed until the closure is executed.
-let double = { count.getValue() * 1 }
+let double = { count.getValue() * 2 }
 
 // Reacting to state changes.
 // This closure reruns whenever count.setValue() gets executed.
