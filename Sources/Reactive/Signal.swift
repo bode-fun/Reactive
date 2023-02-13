@@ -7,12 +7,12 @@
 
 typealias SignalId = Int
 
-struct Signal<T> {
+public struct Signal<T> {
   let runtime: Runtime
   let id: SignalId
 
   // TODO: The value property is not working
-  var value: T {
+  internal var value: T {
     get {
       return getValue()
     }

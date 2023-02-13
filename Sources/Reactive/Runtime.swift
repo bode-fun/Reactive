@@ -5,11 +5,13 @@
 //  Created by Jan Fooken on 06.02.23.
 //
 
-class Runtime {
+public class Runtime {
   var signalValues: [Any] = []
   var runningEffect: EffectId?
   var signalSubscribers: [SignalId: Set<EffectId>] = [:]
   var effects: [() -> Void] = []
+
+  public init() {}
 
   public func createSignal<T>(_ value: T) -> Signal<T> {
     // Append value to values
