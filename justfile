@@ -15,4 +15,5 @@ build-release:
 bundle:
     carton bundle --product ReactiveWebDemo
 
-dev: carton dev --product ReactiveWebDemo
+dev: 
+    carton dev --product ReactiveWebDemo

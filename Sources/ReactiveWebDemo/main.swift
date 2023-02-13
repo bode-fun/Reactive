@@ -36,7 +36,6 @@ func counterComponent() -> JSValue {
     let divElement = document.createElement("div")
     _ = divElement.appendChild(incrementButtonElement)
     _ = divElement.appendChild(counterParagraphElement)
-    _ = divElement.appendChild(doubleParagraphElement)
     _ = divElement.appendChild(decrementButtonElement)
 
     return divElement
