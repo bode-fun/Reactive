@@ -13,6 +13,6 @@ build-release:
     swift build --triple {{triple}} -c release
 
 bundle:
-    carton bundle --product ReactiveWeb
+    carton bundle --product ReactiveWebDemo
 
-dev: carton dev --product ReactiveWeb
+dev: carton dev --product ReactiveWebDemo
