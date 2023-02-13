@@ -15,6 +15,9 @@ Everything is about state 🤯
 
 ### Counter
 
+Run the following demo with `swift run ReactiveDemo`.
+You can find the code [here](./Sources/ReactiveDemo/main.swift) 🥰
+
 ```swift
 // Holding the state
 // Signals need a global runtime which keeps their values
